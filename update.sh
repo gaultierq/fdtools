@@ -1,4 +1,5 @@
 #!/bin/sh
+PWD="$( cd "$( dirname "$0" )" && pwd )"
 
-echo "updating backend" >> ./deploy.log
-./deploy_updated_backend.sh >> ./deploy.log 2>&1 &
+echo "updating backend" >> $PWD/deploy.log
+$PWD/deploy_updated_backend.sh >> $PWD/deploy.log 2>&1 &
